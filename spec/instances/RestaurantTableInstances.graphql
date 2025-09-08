@@ -1,4 +1,3 @@
-"""Specifies the existing instances of restaurant tables with structured tags."""
 extend type RestaurantTable {
     instanceTag: TableInstanceTag
 }
