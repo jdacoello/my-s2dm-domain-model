@@ -1,0 +1,16 @@
+"""Represents an order in the restaurant, which can be either a dine-in or take-out order."""
+union RestaurantOrder = DineInOrder | TakeOutOrder
+
+"""Represents an order placed by a customer dining in at the restaurant."""
+type DineInOrder {
+    id: ID!
+    table: RestaurantTable
+    orderedItems: [MenuItem]
+}
+
+"""Represents an order placed by a customer for take-out."""
+type TakeOutOrder {
+    id: ID!
+    customerName: String
+    orderedItems: [MenuItem]
+}

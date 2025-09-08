@@ -1,0 +1,45 @@
+"""Mass measurement units for ingredient quantities."""
+enum MassUnit {
+    GRAM
+    KILOGRAM
+    OUNCE
+    POUND
+}
+
+"""Volume measurement units for liquid ingredients."""
+enum VolumeUnit {
+    MILLILITER
+    LITER
+    FLUID_OUNCE
+    CUP
+}
+
+"""Count-based units for discrete items."""
+enum CountUnit {
+    PIECE
+    SLICE
+    PINCH
+    TABLESPOON
+    TEASPOON
+}
+
+"""Length measurement units for pizza dimensions."""
+enum LengthUnit {
+    MILLIMETER
+    CENTIMETER
+    INCH
+}
+
+"""Temperature measurement units for cooking."""
+enum TemperatureUnit {
+    CELSIUS
+    FAHRENHEIT
+    KELVIN
+}
+
+"""Time measurement units for preparation and cooking."""
+enum TimeUnit {
+    SECOND
+    MINUTE
+    HOUR
+}

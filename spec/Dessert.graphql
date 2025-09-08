@@ -1,0 +1,14 @@
+"""Represents a dessert item with its unique identifier, name, and kind."""
+type Dessert {
+    id: ID!
+    name: String!
+    kind: DessertKind!
+}
+
+"""Enumerates the possible kinds of desserts."""
+enum DessertKind {
+    CAKE
+    ICE_CREAM
+    PUDDING
+    COOKIE
+}

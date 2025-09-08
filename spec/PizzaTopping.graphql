@@ -1,0 +1,79 @@
+union PizzaTopping = CheeseTopping | MeatTopping | VegetableTopping
+
+interface Ingredient {
+  id: ID!
+  name: String!
+  description: String
+  calories: Float
+  amount(unit: MassUnit = GRAM): Float
+}
+
+"""Cheese varieties used as pizza toppings."""
+type CheeseTopping implements Ingredient {
+  id: ID!
+  name: String!
+  description: String
+  calories: Float
+  amount(unit: MassUnit = GRAM): Float
+  cheeseType: CheeseType!
+}
+
+# Pizza toppings including cheese, meat, vegetable, and seafood varieties.
+
+"""Different varieties of cheese used as pizza toppings."""
+enum CheeseType {
+  MOZZARELLA
+  PARMESAN
+  PROVOLONE
+}
+
+"""Meat-based pizza toppings."""
+type MeatTopping implements Ingredient {
+  id: ID!
+  name: String!
+  description: String
+  calories: Float
+  amount(unit: MassUnit = GRAM): Float
+  meatType: MeatType!
+}
+
+"""Different types of meat toppings for pizza."""
+enum MeatType {
+  PEPPERONI
+  SAUSAGE
+  HAM
+  BACON
+  CHICKEN
+  BEEF
+  TURKEY
+  PROSCIUTTO
+  SALAMI
+  ANCHOVY
+}
+
+"""Plant-based toppings for pizza."""
+type VegetableTopping implements Ingredient {
+  id: ID!
+  name: String!
+  description: String
+  calories: Float
+  amount(unit: MassUnit = GRAM): Float
+  vegetableType: VegetableType!
+}
+
+"""Different vegetable toppings available for pizza."""
+enum VegetableType {
+  MUSHROOM
+  ONION
+  BELL_PEPPER
+  TOMATO
+  OLIVE
+  SPINACH
+  ARTICHOKE
+  BROCCOLI
+  CORN
+  JALAPENO
+  GARLIC
+  BASIL
+  OREGANO
+}

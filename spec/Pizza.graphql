@@ -1,0 +1,58 @@
+"""Represents a pizza with its properties."""
+type Pizza {
+  id: ID!
+  name: PizzaName!
+  size: PizzaSize!
+  base: PizzaBase!
+  thickness(unit: LengthUnit = CENTIMETER): Float @range(min: 0.5, max: 3.0)
+  toppings: [PizzaTopping] @cardinality(min: 0, max: 10)
+}
+
+"""Standard pizza names for common types."""
+enum PizzaName {
+    MARGHERITA
+    PEPPERONI
+    VEGGIE
+    HAWAIIAN
+    SUPREME
+    FOUR_CHEESE
+    MEAT_LOVERS
+    CUSTOM
+}
+
+"""Physical size classifications for pizza and ingredients."""
+enum PizzaSize {
+    SMALL
+    MEDIUM
+    LARGE
+}
+
+"""The foundation layer of a pizza including dough and base sauce."""
+type PizzaBase {
+    doughType: DoughType!
+    sauce: PizzaSauce!
+    spicyLevel: SpiceLevel!
+}
+
+"""Different types of pizza dough bases."""
+enum DoughType {
+    VEGAN
+    GLUTEN_FREE
+    WHOLE_WHEAT
+}
+
+"""Different types of sauces applied to pizza base before toppings."""
+enum PizzaSauce {
+    TOMATO
+    PESTO
+    WHITE_GARLIC
+    CHIPOTLE
+    NONE
+}
+
+enum SpicyLevel {
+    MILD
+    MEDIUM
+    HOT
+    VERY_HOT
+}

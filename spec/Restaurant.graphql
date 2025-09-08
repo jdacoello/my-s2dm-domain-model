@@ -1,0 +1,6 @@
+"""Represents a restaurant with its tables and orders."""
+type Restaurant {
+    id: ID!
+    tables: [RestaurantTable]
+    orders: [RestaurantOrder]
+}

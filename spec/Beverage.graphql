@@ -1,0 +1,15 @@
+"""Represents a beverage item with its unique identifier, name, and kind."""
+type Beverage {
+    id: ID!
+    name: String!
+    kind: BeverageKind!
+}
+
+"""Enumerates the possible kinds of beverages."""
+enum BeverageKind {
+    SOFT_DRINK
+    JUICE
+    WATER
+    COFFEE
+    TEA
+}

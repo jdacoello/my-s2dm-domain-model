@@ -1,0 +1,5 @@
+"""Represents a table in a restaurant, including its status and ordered items."""
+type RestaurantTable {
+    isOccupied: Boolean
+    orderedItems: [MenuItem]
+}
