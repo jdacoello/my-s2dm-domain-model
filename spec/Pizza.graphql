@@ -50,7 +50,7 @@ enum PizzaSauce {
     NONE
 }
 
-enum SpicyLevel {
+enum SpiceLevel {
     MILD
     MEDIUM
     HOT
