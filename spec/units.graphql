@@ -27,7 +27,7 @@ enum CountUnit {
 """Length measurement units for pizza dimensions."""
 enum LengthUnit {
     MILLIMETER
-    CENTIMETER
+    CENTIM
     INCH
 }
 
