@@ -3,7 +3,7 @@ type Pizza {
   id: ID!
   name: PizzaName!
   size: PizzaSize!
-  note: String
+  note: String!
   base: PizzaBase!
   thickness(unit: LengthUnit = CENTIMETER): Float @range(min: 0.5, max: 3.0)
   toppings: [PizzaTopping] @cardinality(min: 0, max: 10)
