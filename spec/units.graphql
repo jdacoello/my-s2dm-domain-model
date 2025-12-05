@@ -1,6 +1,6 @@
 """Mass measurement units for ingredient quantities."""
 enum MassUnit {
-    GRAM
+    GM
     KILOGRAM
     MILIGRAM
     OUNCE

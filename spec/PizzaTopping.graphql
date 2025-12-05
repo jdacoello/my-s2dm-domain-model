@@ -5,7 +5,7 @@ interface Ingredient {
   name: String!
   description: String
   calories: Float
-  amount(unit: MassUnit = GRAM): Float
+  amount(unit: MassUnit = GM): Float
 }
 
 """Cheese varieties used as pizza toppings."""
@@ -14,7 +14,7 @@ type CheeseTopping implements Ingredient {
   name: String!
   description: String
   calories: Float
-  amount(unit: MassUnit = GRAM): Float
+  amount(unit: MassUnit = GM): Float
   cheeseType: CheeseType!
 }
 
@@ -33,7 +33,7 @@ type MeatTopping implements Ingredient {
   name: String!
   description: String
   calories: Float
-  amount(unit: MassUnit = GRAM): Float
+  amount(unit: MassUnit = GM): Float
   meatType: MeatType!
 }
 
@@ -57,7 +57,7 @@ type VegetableTopping implements Ingredient {
   name: String!
   description: String
   calories: Float
-  amount(unit: MassUnit = GRAM): Float
+  amount(unit: MassUnit = GM): Float
   vegetableType: VegetableType!
 }
 
